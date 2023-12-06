@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -16,9 +16,9 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Syne", sans-serif;
+  --body-font: 'Syne', sans-serif;
   --h2-font-size: 1.25rem;
-  --normal-font-size: .938rem;
+  --normal-font-size: 0.938rem;
 
   /*========== Font weight ==========*/
   --font-regular: 400;
@@ -92,29 +92,32 @@ img {
   height: 100vh;
 }
 
-/*=============== HEADER & NAV ===============*/
+.main__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
 
+/*=============== HEADER & NAV ===============*/
 
 /* Navigation for mobile devices */
 
-
 /* Show menu */
-
 
 /*=============== SEARCH ===============*/
 
-
 /* Show search */
-
 
 /*=============== LOGIN ===============*/
 
-
 /* Show login */
-
 
 /*=============== BREAKPOINTS ===============*/
 /* For medium devices */
-
 
 /* For large devices */
