@@ -103,6 +103,31 @@ img {
   z-index: -1;
 }
 
+.search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-modal);
+  background-color: hsla(230, 75%, 32%, 0.1);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px); /* For Safari */
+  padding: 8rem 1.5rem 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
+.search__close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
 /*=============== HEADER & NAV ===============*/
 .header {
   position: fixed;
@@ -154,7 +179,7 @@ img {
     top: -100%;
     left: 0;
     background-color: var(--body-color);
-    box-shadow: 0 8px 16px hsla(230, 75%, 3%, 0.15);
+    box-shadow: 0 8px 16px hsla(230, 75%, 32%, 0.15);
     width: 100%;
     padding-block: 4.5rem 4rem;
     transition: top 0.4s;
@@ -186,8 +211,43 @@ img {
 }
 
 /*=============== SEARCH ===============*/
+.search__form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--container-color);
+  box-shadow: 0 8px 32px hsla(230, 75%, 15%, 0.2);
+  padding-inline: 1rem;
+  border-radius: 0.5rem;
+  transform: translateY(-1rem);
+  transition: transform 0.4s;
+}
+
+.search__icon {
+  font-size: 1.25rem;
+  color: var(--title-color);
+}
+
+.search__input {
+  width: 100%;
+  padding-block: 1rem;
+  background-color: var(--container-color);
+  color: var(--text-color);
+}
+
+.search__input::placeholder {
+  color: var(--text-color);
+}
 
 /* Show search */
+.show-search {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.show-search .search__form {
+  transform: translateY(0);
+}
 
 /*=============== LOGIN ===============*/
 
